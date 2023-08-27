@@ -1,0 +1,71 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+    var a = 20;
+    let b = 10;
+    const pi = 3.14;
+
+    console.log("Addition is"+(a+b));
+
+    var name = "Snehal";
+    var isAdmin = true;
+    var salary = 45678.88;
+    var id = 101;
+
+
+    // two ways to print
+    document.write("my name is " + name);
+
+
+    console.log("my name is " + name);
+
+
+    for (var i = 1; i <= 10; i++) {
+    document.write("<br />"+ i);
+    }
+
+     // function in Javascript
+
+
+        function Addition() {
+            var a = 10, b = 20;
+            var c = a + b;
+            document.write("<br />Add"+c);
+        }
+
+
+        // call a function
+        Addition();
+
+
+        function Sub(a, b) {
+            var c = a - b;
+            document.write("<br/> Sub"+c);
+        }
+
+
+        Sub(35, 22);
+
+
+        function Multiply(a, b) {
+            var c = a * b;
+            return c;
+        }
+
+
+        var result = Multiply(56, 12);
+        document.write("<br/> Multi" + result);
+
+    </script>
+
+
+
+</body>
+</html>

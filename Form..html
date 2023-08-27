@@ -1,0 +1,72 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter a Number : <input type="text" id="t1" /> <br />
+    Enter a Number : <input type="text" id="t2" /> <br />
+    Result : <input type="text" id="t3" disabled /><br />
+    <input type="button" value="Add" onclick="Addition()" />
+    <input type="button" value="Sub" onclick="Substraction()" />
+    <input type="button" value="Multiply" onclick="Multiplication()" />
+    <input type="button" value="Division" onclick="Division()" />
+    <input type="button" value="Clear" onclick="clearData()" />
+    <br />
+    <div id="d1"></div>
+    <b id="d2"></b>
+    <i id="d3"></i>
+
+    <script>
+        //DOM method and Property
+        function Addition()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById("t2").value;
+            var sum = parseInt(a) + parseInt(b);
+            document.getElementById("t3").value = sum;
+            document.getElementById("d1").innerHTML = "Sum is " +sum;
+            alert("sum is" +sum);
+        }
+        function clearData()
+        {
+            var res = confirm("Do you want to clear the form ?");
+            if(res == true) {
+                document.getElementById("t1").value = "";
+                document.getElementById("t2").value = "";
+                document.getElementById("t3").value = "";
+            }
+        }
+        function Substraction()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById("t2").value;
+            var sub = parseInt(a) - parseInt(b);
+            document.getElementById("t3").value = sub;
+            document.getElementById("d2").innerHTML = "Sub is " +sub;
+            alert("sub is" +sub);
+        }
+        function Multiplication()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById("t2").value;
+            var mult = parseInt(a) * parseInt(b);
+            document.getElementById("t3").value = mult;
+            document.getElementById("d3").innerHTML = "Mult is " +mult;
+            alert("mult is" +mult);
+        }
+        function Division()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById("t2").value;
+            var div = parseInt(a) / parseInt(b);
+            document.getElementById("t3").value = div;
+            document.getElementById("d1").innerHTML = "Div is " +div;
+            alert("div is" +div);
+        }
+    </script>
+</body>
+</html>

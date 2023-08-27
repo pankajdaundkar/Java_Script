@@ -1,0 +1,79 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter a Number : <input type="text" id="n1" /><br />
+    Enter a Name : <input type="text" id="t1" /> <br />
+    <input type="button" value="Add" onclick="add()" />
+    <input type="button" value="Remove" onclick="remove()" />
+    <div id="d1"></div>
+    <script>
+        var numbers = [1, 2, 3, 4, 5];
+        numbers.push(6);
+        numbers.unshift(0);
+        numbers.pop();
+        numbers.shift();
+        numbers.splice(4, 0, 6, 7)
+        numbers.sort();
+        numbers.reverse();
+        for (let i = 0; i < numbers.length; i++) {
+            document.write("<br/>" + numbers[i]);
+        }
+
+        var names = ["Snehal", "Akshata", "Sagar", "Pankaj", "Anjali"];
+        function defaultList() {
+            var data = "<ol>";
+            for (var i = 0; i < names.length; i++) {
+                data += "<li>" + names[i] + "</li>"
+            }
+            data += "</ol>";
+            console.log(data); //string format
+            document.getElementById("d1").innerHTML = data;
+        }
+        function add() {
+            let i = document.getElementById("n1").value;
+            let a = document.getElementById("t1").value;
+            //names.push(a);
+            names.splice(i-1, 0, a)
+            defaultList();
+        }
+        function remove() {
+            let a = document.getElementById("t1").value;
+            for (var i = 0; i < names.length; i++) {
+                if (a == names[i]) {
+                    names.splice(i, 1);
+                    break;
+                }
+
+            }
+            defaultList();
+        }
+        defaultList();
+
+            names.push("Pravin"); //add element at last
+            names.unshift("Gaurav"); // add element at first
+            names.pop(); //remove last element
+            names.shift();  //remove first element
+            names.splice(3, 0, "Swapnil", "Nikita"); //replace or add in between
+            var list = names.slice(2, 6); //slice means cut
+            names.sort();
+            names.reverse();
+            for (let i = 0; i < names.length; i++) {
+                document.write("<br/>" + names[i]);
+            }
+            document.write("<br/>-------------------------");
+            for (let i = 0; i < list.length; i++) {
+                document.write("<br/>" +list[i]);
+            }
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        var student = [
+            {roll:1, name:"Snehal", marks:80},
+            {roll:2, name:"Nikita", marks:90},
+            {roll:3, name:"Sagar", marks:70},
+            {roll:4, name:"Pankaj", marks:67},
+            {roll:5, name:"Akshata", marks:78},
+            {roll:6, name:"Vidyashree", marks:79},
+            {roll:7, name:"Pravin", marks:81},
+            {roll:8, name:"Gaurav", marks:85},
+            {roll:9, name:"Fahad", marks:88},
+            {roll:10, name:"Sanket", marks:68}
+        ];
+
+         var data = "<table border='1'><tr><td>Roll</td><td>Name</td><td>Marks</td></tr>";
+        for (var i = 0; i < student.length; i++) {
+            data += "<tr><td>" + student[i].roll + "</td><td>" + student[i].name +
+                "</td><td>" + student[i].marks + "</td></tr>";
+        }
+        data += "</table>";
+        document.getElementById("d1").innerHTML = data;
+
+    </script>
+</body>
+</html>
